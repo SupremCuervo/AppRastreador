@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/black">
+
+	<!-- Botón Volver al Menú - Parte superior izquierda (50px) -->
+	<ImageButton
+		android:id="@+id/btnBackToMenu"
+		android:layout_width="50dp"
+		android:layout_height="50dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:background="@drawable/button_background_circle_blue"
+		android:clickable="true"
+		android:contentDescription="Regresar"
+		android:elevation="8dp"
+		android:focusable="true"
+		android:padding="12dp"
+		android:src="@drawable/regreso"
+		android:scaleType="fitCenter"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<!-- Selector de Modo - Parte superior derecha -->
+	<Spinner
+		android:id="@+id/spinnerMode"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:layout_marginTop="8dp"
+		android:minHeight="48dp"
+		android:background="@drawable/spinner_background"
+		android:popupBackground="@drawable/spinner_dropdown_background"
+		android:textColor="@color/white"
+		android:elevation="10dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<!-- Preview de la Cámara -->
+	<androidx.camera.view.PreviewView
+		android:id="@+id/previewView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toTopOf="@id/buttonsLayout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<!-- ImageView para mostrar imagen seleccionada de galería -->
+	<ImageView
+		android:id="@+id/imageView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:scaleType="fitCenter"
+		android:visibility="gone"
+		app:layout_constraintBottom_toTopOf="@id/buttonsLayout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<com.mhrc.apprastreador.GraphicOverlay
+		android:id="@+id/graphicOverlay"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toTopOf="@id/buttonsLayout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+
+	<LinearLayout
+		android:id="@+id/buttonsLayout"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="16dp"
+		android:orientation="horizontal"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
+
+		<Button
+			android:id="@+id/btnSwitchCamera"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="8dp"
+			android:layout_weight="1"
+			android:text="Cambiar Cámara"
+			android:backgroundTint="@color/button_color"
+			android:textColor="@color/white" />
+
+		<Button
+			android:id="@+id/btnTakePhoto"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="8dp"
+			android:layout_weight="1"
+			android:text="Cámara"
+			android:backgroundTint="@color/button_color"
+			android:textColor="@color/white" />
+
+		<Button
+			android:id="@+id/btnSelectGallery"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="8dp"
+			android:layout_weight="1"
+			android:text="Galería"
+			android:backgroundTint="@color/button_color"
+			android:textColor="@color/white" />
+
+		<Button
+			android:id="@+id/btnAnalyze"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Analizar"
+			android:backgroundTint="@color/button_color"
+			android:textColor="@color/white" />
+	</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

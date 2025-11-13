@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppRastreador</string>
+    <string name="app_logo">Logo de la aplicación</string>
+    <string name="help_button">Ayuda</string>
+</resources>

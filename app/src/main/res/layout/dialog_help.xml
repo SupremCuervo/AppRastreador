@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="24dp">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Cómo usar la detección de objetos"
+		android:textSize="20sp"
+		android:textStyle="bold"
+		android:layout_marginBottom="16dp" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:lineSpacingExtra="4dp"
+		android:text="• Mantén el objeto bien iluminado y centralizado\n\n• Asegúrate de que el objeto ocupe una parte considerable de la pantalla\n\n• Evita movimientos bruscos de la cámara\n\n• El objeto debe tener características visuales claras\n\n• La detección puede tardar unos segundos en iniciarse\n"
+		android:textSize="16sp" />
+
+</LinearLayout>
+

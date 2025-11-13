@@ -1,0 +1,114 @@
+═══════════════════════════════════════════════════════════════
+  🚀 GUÍA RÁPIDA: CONVERTIR YOLOv5 A TFLite PARA TU APP
+═══════════════════════════════════════════════════════════════
+
+📥 MÉTODO OFICIAL: CONVERTIR DESDE PYTORCH ⭐
+
+YOLOv5 no proporciona modelos TFLite pre-convertidos.
+Debes convertir desde PyTorch usando el script oficial.
+
+═══════════════════════════════════════════════════════════════
+
+PASO 1: CLONAR REPOSITORIO
+
+git clone https://github.com/ultralytics/yolov5.git
+cd yolov5
+
+═══════════════════════════════════════════════════════════════
+
+PASO 2: INSTALAR DEPENDENCIAS
+
+pip install -r requirements.txt
+
+═══════════════════════════════════════════════════════════════
+
+PASO 3: DESCARGAR MODELO PRE-ENTRENADO
+
+Elige uno de estos modelos (PyTorch .pt):
+
+YOLOv5n (Nano - Más ligero):
+https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5n.pt
+
+YOLOv5s (Small - Recomendado):
+https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5s.pt
+
+YOLOv5m (Medium - Mayor precisión):
+https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5m.pt
+
+═══════════════════════════════════════════════════════════════
+
+PASO 4: EXPORTAR A TENSORFLOW LITE
+
+python export.py --weights yolov5s.pt --include tflite
+
+Resultado: Se genera yolov5s.tflite en el directorio actual.
+
+═══════════════════════════════════════════════════════════════
+
+PASO 5: COLOCAR EN LA APP
+
+1. Renombra yolov5s.tflite a yolov5.tflite
+2. Copia a: AppRastreador/app/src/main/assets/yolov5.tflite
+3. Verifica que yolov5_labels.txt esté en assets/
+4. ¡Listo! La app lo detectará automáticamente
+
+
+═══════════════════════════════════════════════════════════════
+
+📋 VERIFICACIÓN:
+
+✅ Archivo descargado: yolov5.tflite (o yolov5s.tflite, yolov5n.tflite)
+✅ Tamaño: Entre 6-30 MB
+✅ Ubicación: app/src/main/assets/yolov5.tflite
+✅ Etiquetas: app/src/main/assets/yolov5_labels.txt (ya creado)
+
+═══════════════════════════════════════════════════════════════
+
+🔗 ENLACES OFICIALES:
+
+Repositorio YOLOv5:
+https://github.com/ultralytics/yolov5
+
+Releases (Modelos PyTorch):
+https://github.com/ultralytics/yolov5/releases
+
+Documentación Oficial:
+https://docs.ultralytics.com/
+
+Guía de Exportación:
+https://docs.ultralytics.com/modes/export/
+
+═══════════════════════════════════════════════════════════════
+
+📝 NOTAS IMPORTANTES:
+
+• YOLOv5 NO incluye "background" como primera clase
+• El archivo yolov5_labels.txt ya está creado y listo
+• El código detectará automáticamente el modelo al ejecutar
+• Necesitas Python 3.8+ y PyTorch para convertir
+• El proceso de conversión tarda 1-2 minutos
+• Verifica que el modelo exportado funcione antes de usarlo
+
+═══════════════════════════════════════════════════════════════
+
+✅ DESPUÉS DE DESCARGAR:
+
+1. Coloca yolov5.tflite en: app/src/main/assets/
+2. Verifica que yolov5_labels.txt esté en: app/src/main/assets/
+3. Sincroniza el proyecto (Sync Now en Android Studio)
+4. Ejecuta la app
+5. Revisa Logcat para confirmar que el modelo se carga
+
+═══════════════════════════════════════════════════════════════
+
+🎯 RECOMENDACIÓN:
+
+Para tu app móvil, usa YOLOv5s (small):
+• Buen balance entre velocidad y precisión
+• ~14 MB de tamaño
+• Funciona bien en la mayoría de dispositivos
+
+═══════════════════════════════════════════════════════════════
+
+¡Listo! Solo descarga, coloca en assets/, y ejecuta. 🚀
+

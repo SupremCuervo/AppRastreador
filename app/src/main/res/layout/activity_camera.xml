@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/black">
+
+	<!-- Preview de la Cámara -->
+	<androidx.camera.view.PreviewView
+		android:id="@+id/previewView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<!-- Overlay para dibujar bounding boxes -->
+	<com.mhrc.apprastreador.GraphicOverlay
+		android:id="@+id/graphicOverlay"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="@android:color/transparent"
+		android:clickable="false"
+		android:focusable="false"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<!-- Botón Regresar - Parte superior izquierda (80px) -->
+	<ImageButton
+		android:id="@+id/btnBackToMenu"
+		android:layout_width="80dp"
+		android:layout_height="80dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:background="@drawable/button_background_circle_blue"
+		android:clickable="true"
+		android:contentDescription="Regresar"
+		android:elevation="8dp"
+		android:focusable="true"
+		android:padding="12dp"
+		android:src="@drawable/regreso"
+		android:scaleType="fitCenter"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<!-- Botón Información (?) - Parte superior derecha (como en Rastreador) -->
+	<Button
+		android:id="@+id/btnHelp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:layout_marginTop="16dp"
+		android:background="@drawable/button_background_circle_yellow"
+		android:clickable="true"
+		android:contentDescription="Información"
+		android:elevation="8dp"
+		android:focusable="true"
+		android:minWidth="0dp"
+		android:minHeight="0dp"
+		android:padding="12dp"
+		android:text="?"
+		android:textColor="@android:color/black"
+		android:textSize="24sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<!-- Botón Cambiar Cámara - Parte inferior central -->
+	<ImageButton
+		android:id="@+id/btnSwitchCamera"
+		android:layout_width="50dp"
+		android:layout_height="50dp"
+		android:layout_marginBottom="80dp"
+		android:background="@drawable/button_background_circle_blue"
+		android:clickable="true"
+		android:contentDescription="Cambiar cámara"
+		android:elevation="8dp"
+		android:focusable="true"
+		android:padding="12dp"
+		android:src="@drawable/camara"
+		android:scaleType="fitCenter"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintHorizontal_bias="0.5" />
+
+
+	<!-- Botón de Filtros (oculto) -->
+	<ImageButton
+		android:id="@+id/btnFilters"
+		android:layout_width="48dp"
+		android:layout_height="48dp"
+		android:layout_margin="16dp"
+		android:background="?attr/selectableItemBackgroundBorderless"
+		android:contentDescription="Filtros"
+		android:src="@android:drawable/ic_menu_manage"
+		android:tint="@android:color/white"
+		android:visibility="gone"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/btnHelp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
