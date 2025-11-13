@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img src="logo.png" alt="AppRastreador Logo" width="200"/>
+
 ![Android](https://img.shields.io/badge/Android-5.0%2B-green?style=for-the-badge&logo=android)
 ![Java](https://img.shields.io/badge/Java-11-orange?style=for-the-badge&logo=java)
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.9-purple?style=for-the-badge&logo=kotlin)
