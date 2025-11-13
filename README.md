@@ -306,7 +306,6 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 - Desarrollador: MHRC
 - Versión: 1.0
-- Email: [tu-email@ejemplo.com]
 
 ---
 
@@ -325,21 +324,6 @@ Para documentación técnica detallada, consulta:
 - **Android Team** - Por CameraX y las herramientas de desarrollo
 - **TensorFlow** - Por TensorFlow Lite
 - **Comunidad Open Source** - Por las librerías y recursos utilizados
-
----
-
-## 📈 Roadmap
-
-### Próximas Características
-
-- [ ] Guardar resultados de detección
-- [ ] Exportar imágenes con anotaciones
-- [ ] Historial de detecciones
-- [ ] Filtros avanzados por tipo de objeto
-- [ ] Modo oscuro
-- [ ] Soporte para múltiples idiomas
-- [ ] Integración completa de modelos TensorFlow Lite personalizados
-- [ ] Modo de grabación de video con detecciones
 
 ---
 
